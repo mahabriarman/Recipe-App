@@ -62,7 +62,7 @@ button[type="submit"]:hover{
     transform: scale(1.05);
 }
 
-/* RECIPE CONTAINER */
+/* RECIPE CONTAINER  main section */
 .recipe-container{
     display: flex;
     flex-wrap: wrap;
