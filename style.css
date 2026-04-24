@@ -11,16 +11,12 @@ body{
     line-height: 1.5;
 }
 
-/* NAVBAR */
 header nav{
     background-color: #212121;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 header nav h1{
@@ -37,7 +33,6 @@ header nav form{
     max-width: 500px;
 }
 
-/* INPUT + BUTTON */
 form input[type="text"],
 button[type="submit"]{
     flex-grow: 1;
@@ -48,13 +43,11 @@ button[type="submit"]{
     font-size: 16px;
 }
 
-/* Input styling */
 form input[type="text"]{
     margin-right: 10px;
     background-color: #f5f5f5;
 }
 
-/* Submit button */
 button[type="submit"]{
     color: white;
     background: linear-gradient(135deg, #ff512f, #dd2476);
@@ -67,7 +60,6 @@ button[type="submit"]:hover{
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* RECIPE CONTAINER */
 .recipe-container{
     text-align: center;
     display: grid;
@@ -79,7 +71,6 @@ button[type="submit"]:hover{
     place-items: center;
 }
 
-/* RECIPE CARD */
 .recipe{
     background-color: white;
     display: flex;
@@ -121,7 +112,6 @@ button[type="submit"]:hover{
     font-weight: 600;
 }
 
-/* 🔥 UPDATED VIEW RECIPE BUTTON */
 .recipe button{
     font-size: 18px;
     font-weight: 600;
@@ -130,29 +120,46 @@ button[type="submit"]:hover{
     border: none;
     cursor: pointer;
     margin: 18px auto;
-
-    /* NEW COLOR */
     background: linear-gradient(135deg, #ff7e5f, #ff3d54);
     color: #fff;
-
     box-shadow: 0 4px 12px rgba(255, 61, 84, 0.4);
     transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .recipe button:hover{
     background: linear-gradient(135deg, #ff3d54, #ff7e5f);
     transform: translateY(-3px) scale(1.06);
     box-shadow: 0 8px 20px rgba(255, 61, 84, 0.6);
 }
 
-/* Active click */
 .recipe button:active{
     transform: scale(0.95);
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
-/* RESPONSIVE */
+.recipe-detail{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #694c2f;
+    border-radius: 12px;
+    width: 50%;
+    height: 60%;
+    font-size: 18px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.recipe-close-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
 @media screen and (max-width:600px) {
     header nav{
         flex-direction: column;
